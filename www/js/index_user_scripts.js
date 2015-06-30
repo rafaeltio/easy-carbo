@@ -16,6 +16,18 @@
         activate_subpage("#uib_page_anamnese"); 
     });
     
+        /* button  #btnMedico */
+    $(document).on("click", "#btnMedico", function(evt)
+    {
+         activate_subpage("#uib_medico"); 
+    });
+    
+        /* button  #btnAnamnese */
+    $(document).on("click", "#btnAnamnese", function(evt)
+    {
+         activate_subpage("#uib_page_anamnese"); 
+    });
+    
     }
  document.addEventListener("app.Ready", register_event_handlers, false);
 })();
