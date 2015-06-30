@@ -6,6 +6,8 @@
  */
  function register_event_handlers()
  {
+    activate_page("#uib_page_login"); 
+     
         /* button  #btnMedico */
     $(document).on("click", "#btnMedico", function(evt)
     {
@@ -33,7 +35,7 @@
         /* button  #btnLogin */
     $(document).on("click", "#btnLogin", function(evt)
     {
-         activate_page("#mainpage"); 
+         activate_subpage("#uib_page_refeicao"); 
     });
     
         /* button  #btnSair */
