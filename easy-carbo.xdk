@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "appDesigner",
       "projectGuid": "48b01af6-7166-4981-84e8-75c00c681a69",
-      "lastModifiedDate": 1435598889900,
+      "lastModifiedDate": 1435682251386,
       "creationDate": 1435598889816
     },
     "XDK-app-designer": "true",
@@ -48,7 +48,7 @@
           "android-installLocation": "auto"
         },
         "isActive_": true,
-        "appName_": "easy-carbo",
+        "appName_": "Easy-Carbo",
         "appID_": "xdk.intel.blank.ad.template.crosswalk",
         "appAccess_": [
           {
@@ -63,8 +63,8 @@
         "cordovaCLIVersion_": "4.1.2",
         "crosswalkVersion_": "11",
         "appVersion_": "0.0.1",
-        "appAuthor_": "Intel XDK",
-        "appDescription_": "Template to develop a Cordova mobile web app using the App Designer UI editor.",
+        "appAuthor_": "Rafael S. Meneses",
+        "appDescription_": "Aplicativo para auxiliar na contagem de carboidratos",
         "appVersionCode_": "1"
       },
       "Android": {
@@ -77,7 +77,7 @@
           "android-installLocation": "auto"
         },
         "isActive_": true,
-        "appName_": "easy-carbo",
+        "appName_": "Easy-Carbo",
         "appID_": "xdk.intel.blank.ad.template",
         "appAccess_": [
           {
@@ -92,8 +92,8 @@
         "cordovaCLIVersion_": "4.1.2",
         "crosswalkVersion_": "11",
         "appVersion_": "0.0.1",
-        "appAuthor_": "Intel XDK",
-        "appDescription_": "Template to develop a Cordova mobile web app using the App Designer UI editor.",
+        "appAuthor_": "Rafael S. Meneses",
+        "appDescription_": "Aplicativo para auxiliar na contagem de carboidratos",
         "appVersionCode_": "1"
       },
       "iOS": {
@@ -105,7 +105,7 @@
           "ios-configuration": "adhoc"
         },
         "isActive_": true,
-        "appName_": "easy-carbo",
+        "appName_": "Easy-Carbo",
         "appID_": "xdk.intel.blank.ad.template",
         "appAccess_": [
           {
@@ -120,8 +120,8 @@
         "cordovaCLIVersion_": "4.1.2",
         "crosswalkVersion_": "11",
         "appVersion_": "0.0.1",
-        "appAuthor_": "Intel XDK",
-        "appDescription_": "Template to develop a Cordova mobile web app using the App Designer UI editor."
+        "appAuthor_": "Rafael S. Meneses",
+        "appDescription_": "Aplicativo para auxiliar na contagem de carboidratos"
       },
       "Windows8": {
         "platform_": "windows8",
@@ -132,7 +132,7 @@
           "windows-publisher-id": ""
         },
         "isActive_": true,
-        "appName_": "easy-carbo",
+        "appName_": "Easy-Carbo",
         "appID_": "xdk.intel.blank.ad.template",
         "appAccess_": [
           {
@@ -147,8 +147,8 @@
         "cordovaCLIVersion_": "4.1.2",
         "crosswalkVersion_": "11",
         "appVersion_": "0.0.0.1",
-        "appAuthor_": "Intel XDK",
-        "appDescription_": "Template to develop a Cordova mobile web app using the App Designer UI editor."
+        "appAuthor_": "Rafael S. Meneses",
+        "appDescription_": "Aplicativo para auxiliar na contagem de carboidratos"
       },
       "WebApp": {
         "platform_": "webapp",

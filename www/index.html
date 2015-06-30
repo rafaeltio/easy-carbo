@@ -71,6 +71,9 @@
         <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
         <script type="application/javascript" src="js/index_user_scripts.js"></script>
         <script type="application/javascript" src="xdk/ad/ionic_subpage.js"></script>
+        <script type="application/javascript" src="js/index_uib_w_34_modal.js"></script>
+        <script type="application/javascript" src="webrtc/socket.io.js" data-ver="0"></script>
+        <script type="application/javascript" src="webrtc/gab.websocket.js" data-ver="1"></script>
     </head>
 
     <body ng-app="myApp">
@@ -89,7 +92,7 @@
                     </label>
                     <button class="button widget uib_w_3 d-margins button-positive button-outline button-clear ion ion-ios7-checkmark-empty icon-left" data-uib="ionic/button" data-ver="0" id="btnSalvarMedico">Salvar</button>
                 </div>
-                <div class="inner-element uib_w_4 uib_sidebar leftbar bar-bg thumb-bg bar-gutter swipe" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'push', 'v':200, 'side':'left', 'dur':200}">
+                <div class="inner-element uib_w_4 uib_sidebar leftbar bar-bg thumb-bg bar-gutter swipe" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'push', 'v':200, 'side':'left', 'dur':200}" id="sideBarPrincipal">
                     <div class="sidebar-content content-area vertical-col">
 
                         <ion-item class="item widget uib_w_7 d-margins item-avatar" data-uib="ionic/list_item_avatar" data-ver="0">
@@ -97,15 +100,45 @@
                             <h2>Easy Carbo</h2>
                             <p>Rafael Meneses</p>
                         </ion-item>
-                        <ion-item class="item widget uib_w_12 item-button-right d-margins" data-uib="ionic/list_item_button" data-ver="0">Call me
-                            <button class="button button-stable">
-                                <i class="icon ion-ios7-telephone ion"></i>
-                            </button>
-                        </ion-item>
 
-                        <button class="button widget uib_w_30 d-margins" data-uib="ionic/button" data-ver="0" id="btnMedico">Médico</button>
+                        <button class="button widget uib_w_48 d-margins" data-uib="ionic/button" data-ver="0" id="btnRefeicao">Adicionar Refeição</button>
+
                         <button class="button widget uib_w_31 d-margins" data-uib="ionic/button" data-ver="0" id="btnAnamnese">Anamnese</button>
+                        <button class="button widget uib_w_36 d-margins" data-uib="ionic/button" data-ver="0" id="btnAlimento">Cadastro de Alimentos</button>
+                        <button class="button widget uib_w_30 d-margins" data-uib="ionic/button" data-ver="0" id="btnMedico">Médico</button>
+                        <button class="button widget uib_w_52 d-margins button-dark ion ion-log-out icon-left" data-uib="ionic/button" data-ver="0" id="btnSair">Sair</button>
                     </div>
+                </div>
+                <div id="uib_page_blank" class="upage-content vertical-col hidden"></div>
+                <div id="uib_page_alimento" class="upage-content vertical-col hidden">
+                    <label class="item item-input widget uib_w_34 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Nome</span>
+                        <input type="text">
+                    </label>
+                    <label class="item item-input widget uib_w_37 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Quantidade de Carboidratos</span>
+                        <input type="number" value="0">
+                    </label>
+                    <label class="item item-input item-select widget uib_w_38 d-margins" data-uib="ionic/select" data-ver="0">
+                        <div class="input-label">Medida</div>
+                        <select>
+                            <option>Colher de chá</option>
+                            <option>Pitada</option>
+                            <option>Colher de sopa</option>
+                        </select>
+                    </label>
+                </div>
+                <div id="uib_page_refeicao" class="upage-content vertical-col hidden">
+                    <label class="item item-input widget uib_w_43 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Alimento</span>
+                        <i class="icon placeholder-icon ion-search ion"></i>
+                        <input type="text" placeholder="Pesquisar">
+                    </label>
+                    <button class="button widget uib_w_44 d-margins ion ion-android-search icon-left" data-uib="ionic/button" data-ver="0">Go</button>
+                    <ion-item class="item widget uib_w_49 item-icon-left d-margins" data-uib="ionic/list_item_icon" data-ver="0"><i class="icon ion-social-freebsd-devil ion" uib-icon-position="left"></i>Arroz<span class="item-note">Colher de Sopa (2)</span>
+                    </ion-item>
+                    <ion-item class="item widget uib_w_50 item-icon-left d-margins" data-uib="ionic/list_item_icon" data-ver="0"><i class="icon ion-ios7-wineglass ion" uib-icon-position="left"></i>Feijão<span class="item-note">Colher de Sopa (1)</span>
+                    </ion-item>
+                    <ion-item class="item widget uib_w_51 item-icon-left d-margins" data-uib="ionic/list_item_icon" data-ver="0"><i class="icon ion-coffee ion" uib-icon-position="left"></i>Carne de Porco<span class="item-note">100g</span>
+                    </ion-item>
+                    <button class="button widget uib_w_45 d-margins" data-uib="ionic/button" data-ver="0">Salvar</button>
                 </div>
             </div>
             <div id="uib_page_anamnese" class="upage-content vertical-col hidden">
@@ -134,8 +167,27 @@
                         </div>
                     </label>
                 </li>
+                <label class="item item-input item-select widget uib_w_33 d-margins" data-uib="ionic/select" data-ver="0">
+                    <div class="input-label">Regra</div>
+                    <select>
+                        <option>Regra Adulto 1</option>
+                        <option>Regra Adulto 2</option>
+                        <option>Regra Infantil 1</option>
+                    </select>
+                </label>
                 <button class="button widget uib_w_21 d-margins button-positive button-outline button-clear ion ion-ios7-checkmark-empty icon-left" data-uib="ionic/button" data-ver="0" id="btnSalvarAnamnese">Salvar</button>
             </div>
+        </div>
+        <div class="upage vertical-col left hidden" id="uib_page_login">
+            <label class="item item-input widget uib_w_53 d-margins" data-uib="ionic/input" data-ver="0">
+                <i class="icon placeholder-icon ion-person ion"></i>
+                <input type="text" placeholder="E-Mail">
+            </label>
+            <label class="item item-input widget uib_w_54 d-margins" data-uib="ionic/input" data-ver="0">
+                <i class="icon placeholder-icon ion-ios7-unlocked ion"></i>
+                <input type="password" placeholder="Senha">
+            </label>
+            <button class="button widget uib_w_55 d-margins button-positive ion ion-android-checkmark icon-left" data-uib="ionic/button" data-ver="0" id="btnLogin">Entrar</button>
         </div>
     </body>
 

@@ -6,16 +6,6 @@
  */
  function register_event_handlers()
  {
-    $(document).on("click", "#lsMedico", function(evt)
-    {
-        activate_subpage("#uib_medico"); 
-    });
-     
-    $(document).on("click", "#lsAnamnese", function(evt)
-    {
-        activate_subpage("#uib_page_anamnese"); 
-    });
-    
         /* button  #btnMedico */
     $(document).on("click", "#btnMedico", function(evt)
     {
@@ -26,6 +16,30 @@
     $(document).on("click", "#btnAnamnese", function(evt)
     {
          activate_subpage("#uib_page_anamnese"); 
+    });
+    
+        /* button  #btnAlimento */
+    $(document).on("click", "#btnAlimento", function(evt)
+    {
+         activate_subpage("#uib_page_alimento"); 
+    });
+    
+        /* button  #btnRefeicao */
+    $(document).on("click", "#btnRefeicao", function(evt)
+    {
+         activate_subpage("#uib_page_refeicao"); 
+    });
+    
+        /* button  #btnLogin */
+    $(document).on("click", "#btnLogin", function(evt)
+    {
+         activate_page("#mainpage"); 
+    });
+    
+        /* button  #btnSair */
+    $(document).on("click", "#btnSair", function(evt)
+    {
+         activate_page("#uib_page_login"); 
     });
     
     }
