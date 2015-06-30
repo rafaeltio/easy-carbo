@@ -1,5 +1,5 @@
-function uib_w_34_modal_controller($scope, $ionicModal) {
-  $scope.modal = $ionicModal.fromTemplate($(".uib_w_34").html(), {
+function uib_w_56_modal_controller($scope, $ionicModal) {
+  $scope.modal = $ionicModal.fromTemplate($(".uib_w_56").html(), {
     scope: $scope,
     animation: 'slide-in-up'
   });

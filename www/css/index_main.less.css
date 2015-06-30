@@ -246,6 +246,9 @@ body:not(#afui) .upage-outer {
 .uib-absolute {
   position: absolute !important;
 }
+.content-block-inner {
+  box-sizing: content-box;
+}
 .vertical-col > ion-list.widget,
 .vertical-col > .widget.item-radio,
 .vertical-col > .widget.item-toggle,

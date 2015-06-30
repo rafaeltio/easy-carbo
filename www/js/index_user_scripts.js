@@ -33,16 +33,16 @@
     });
     
         /* button  #btnLogin */
-    $(document).on("click", "#btnLogin", function(evt)
-    {
-         activate_subpage("#uib_page_refeicao"); 
-    });
+    
     
         /* button  #btnSair */
     $(document).on("click", "#btnSair", function(evt)
     {
          activate_page("#uib_page_login"); 
     });
+    
+        /* button  #btnLogin */
+    
     
     }
  document.addEventListener("app.Ready", register_event_handlers, false);

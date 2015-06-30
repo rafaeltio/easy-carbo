@@ -74,6 +74,9 @@
         <script type="application/javascript" src="js/index_uib_w_34_modal.js"></script>
         <script type="application/javascript" src="webrtc/socket.io.js" data-ver="0"></script>
         <script type="application/javascript" src="webrtc/gab.websocket.js" data-ver="1"></script>
+        <script type="application/javascript" src="js/index_uib_w_56_modal.js"></script>
+        <script type="application/javascript" src="js/index_uib_w_58_actionsheet.js"></script>
+        <script type="application/javascript" src="js/index_uib_w_58_popup.js"></script>
     </head>
 
     <body ng-app="myApp">
@@ -131,7 +134,7 @@
                         <i class="icon placeholder-icon ion-search ion"></i>
                         <input type="text" placeholder="Pesquisar">
                     </label>
-                    <button class="button widget uib_w_44 d-margins ion ion-android-search icon-left" data-uib="ionic/button" data-ver="0">Go</button>
+                    <button class="button widget uib_w_44 d-margins ion ion-android-search icon-left" data-uib="ionic/button" data-ver="0" ng-controller="uib_w_56_modal_controller" ng-click="show()">Go</button>
                     <ion-item class="item widget uib_w_49 item-icon-left d-margins" data-uib="ionic/list_item_icon" data-ver="0"><i class="icon ion-social-freebsd-devil ion" uib-icon-position="left"></i>Arroz<span class="item-note">Colher de Sopa (2)</span>
                     </ion-item>
                     <ion-item class="item widget uib_w_50 item-icon-left d-margins" data-uib="ionic/list_item_icon" data-ver="0"><i class="icon ion-ios7-wineglass ion" uib-icon-position="left"></i>Feijão<span class="item-note">Colher de Sopa (1)</span>
@@ -139,6 +142,19 @@
                     <ion-item class="item widget uib_w_51 item-icon-left d-margins" data-uib="ionic/list_item_icon" data-ver="0"><i class="icon ion-coffee ion" uib-icon-position="left"></i>Carne de Porco<span class="item-note">100g</span>
                     </ion-item>
                     <button class="button widget uib_w_45 d-margins" data-uib="ionic/button" data-ver="0">Salvar</button>
+                </div>
+                <div class="uib-ionic-modal hidden inner-element uib_w_56 d-margins" data-uib="ionic/modal" data-ver="0">
+                    <ion-modal-view>
+                        <ion-header-bar class="bar inner-element uib_w_57 bar-stable bar-header" data-uib="ionic/header" data-ver="0" align-title="center" id="modalPesquisaAlimento">
+                            <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                            <h1 class="title">Resultado da Pesquisa</h1>
+                            <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                        </ion-header-bar>
+                        <ion-content>
+                            <div class="content-area vertical-col">
+                            </div>
+                        </ion-content>
+                    </ion-modal-view>
                 </div>
             </div>
             <div id="uib_page_anamnese" class="upage-content vertical-col hidden">
@@ -178,16 +194,22 @@
                 <button class="button widget uib_w_21 d-margins button-positive button-outline button-clear ion ion-ios7-checkmark-empty icon-left" data-uib="ionic/button" data-ver="0" id="btnSalvarAnamnese">Salvar</button>
             </div>
         </div>
-        <div class="upage vertical-col left hidden" id="uib_page_login">
-            <label class="item item-input widget uib_w_53 d-margins" data-uib="ionic/input" data-ver="0">
-                <i class="icon placeholder-icon ion-person ion"></i>
-                <input type="text" placeholder="E-Mail">
-            </label>
-            <label class="item item-input widget uib_w_54 d-margins" data-uib="ionic/input" data-ver="0">
-                <i class="icon placeholder-icon ion-ios7-unlocked ion"></i>
-                <input type="password" placeholder="Senha">
-            </label>
-            <button class="button widget uib_w_55 d-margins button-positive ion ion-android-checkmark icon-left" data-uib="ionic/button" data-ver="0" id="btnLogin">Entrar</button>
+        <div class="upage hidden" id="uib_page_login">
+            <div class="upage-outer">
+                <div class="upage-content ac0 content-area vertical-col left" id="page_78_59">
+                    <label class="item item-input widget uib_w_53 d-margins" data-uib="ionic/input" data-ver="0">
+                        <i class="icon placeholder-icon ion-person ion"></i>
+                        <input type="text" placeholder="E-Mail">
+                    </label>
+                    <label class="item item-input widget uib_w_54 d-margins" data-uib="ionic/input" data-ver="0">
+                        <i class="icon placeholder-icon ion-ios7-unlocked ion"></i>
+                        <input type="password" placeholder="Senha">
+                    </label>
+                    <button class="button widget uib_w_55 d-margins button-positive ion ion-android-checkmark icon-left" data-uib="ionic/button" data-ver="0" id="btnLogin" ng-controller="uib_w_58_popup_controller" ng-click="show()">Entrar</button>
+                    <template class="uib-ionic-popup widget uib_w_58 d-margins" data-uib="ionic/popup" data-ver="0"></template>
+                </div>
+            </div>
+
         </div>
     </body>
 
